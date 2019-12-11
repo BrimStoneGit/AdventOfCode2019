@@ -1,7 +1,7 @@
 from pprint import pprint
 
 input_array = []
-with open('input_d1') as f:
+with open('../Data/input_d1') as f:
     for textline in f:
         input_array.append(textline[:-1])
 # pprint(input_array)

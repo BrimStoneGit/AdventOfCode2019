@@ -3,12 +3,17 @@ DEBUG_LOGS = True
 with open("../Data/input_d5") as f:
     op_code = list(map(lambda x: int(x), f.read().split(',')))
 
+# Modified version of day 2 parser
+# result: steps of the instruction pointer after the execution
 def parse_single_op_code(op_code, pointer):
     modes = str(int(op_code[pointer] / 100))
     if op_code[pointer] > 10:
         for i in range(len(modes), 3):
             modes = "0" + modes
         
+    # TODO: code the position/instruction mode variable
+
+
     if op_code[pointer] % 10 == 1:
         # execute add here
         if(DEBUG_LOGS):
